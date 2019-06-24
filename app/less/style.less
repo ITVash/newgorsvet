@@ -36,11 +36,14 @@ body {
   background: url(../img/header-bg.jpg) center top no-repeat / cover;
   min-height: 100vh;
   background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
   .this {
     padding-top: 120px;
     color: #ffffff;
     text-align: center;
     width: 100%;
+    flex-grow: 2;
     .row {
       justify-content: center;
     }
@@ -75,6 +78,55 @@ body {
         }
       }
     }
+  }
+  .slik {
+    flex-grow: .2;
+    .row {
+      justify-content: center;
+    }
+    &__box {
+      //margin-top: 20px;
+      //height: 25px;
+      .adaptiv(1,1,1,1,1);
+      &_item {
+        position: relative;
+        border: 3px solid #fff;
+        border-radius: 10px;
+        height: 40px;
+        width: 22px;
+        animation: sliktik .7s linear infinite;
+        &:before,
+        &:after {
+          content: '\f078';
+          position: absolute;
+          color: #ffffff;
+          font-family: fontawesome;
+        }
+        &:after {
+          bottom: 5px;
+        }
+      }
+    }
+  }
+}
+@keyframes sliktik {
+  0% {
+    transform: translateY(10px);
+  }
+  20% {
+    transform: translateY(5px);
+  }
+  40% {
+    transform: translateY(0px);
+  }
+  60% {
+    transform: translateY(0px);
+  }
+  80% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(10px);
   }
 }
 img {
