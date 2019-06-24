@@ -73,6 +73,21 @@
       }
     }
   }
+  &.activ {
+    & .nav__btn_icon {
+			transform: translate(-50%, -50%) rotate(135deg);
+			&:before {
+				top: 0;
+				width: 15px;
+				transform:  translateX(100%) rotate(-90deg);
+			}
+			&:after {
+				bottom: 0;
+				width: 15px;
+				transform:  translateX(-100%) rotate(-90deg);
+			}
+		}
+  }
   &__brand {
     .adaptiv(5,3,3,2,2);
     order: 0;
