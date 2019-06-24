@@ -49,14 +49,23 @@ body {
     &__box {
       width: 100%;
       display: flex;
+      flex-wrap: wrap;
       align-items: stretch;
       padding-top: 50px;
       &_item {
-        text-align-last: left;
+        text-align: left;
+        padding: 0 15px;
+        margin: 15px 0;
         .adaptiv(4,4,4,4,4);
-        span {
-          display: block;
-          
+        position: relative;
+        &:before {
+          content: '\f00c';
+          font-family: fontawesome;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 20px;
+          position: absolute;
         }
       }
     }
