@@ -34,12 +34,15 @@ body {
 .header {
   background: url(../img/header-bg.jpg) center top no-repeat / cover;
   min-height: 100vh;
-  background-attachment: fixed;  
+  background-attachment: fixed;
   .this {
     padding-top: 120px;
     color: #ffffff;
     text-align: center;
     width: 100%;
+    .row {
+      justify-content: center;
+    }
     h1 {
       font-size: 40px;
       span {
@@ -51,12 +54,13 @@ body {
       display: flex;
       flex-wrap: wrap;
       align-items: stretch;
+      justify-content: center;
       padding-top: 50px;
       &_item {
         text-align: left;
-        padding: 0 15px;
+        padding: 0 20px !important;
         margin: 15px 0;
-        .adaptiv(4,4,4,4,4);
+        .adaptiv(10,6,6,4,4);
         position: relative;
         &:before {
           content: '\f00c';
