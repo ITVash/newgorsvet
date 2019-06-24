@@ -88,6 +88,73 @@
 			}
 		}
   }
+  &__mobile {
+    &.show {
+      transform: translateX(0%);
+    }
+    position: absolute;
+    top: 72px;
+    right: 0;
+    width: 300px;
+    min-height: 100vh;
+    background-color: rgba(0,0,0,.8);
+    box-shadow: 0 0 5px rgba(0,0,0,.3);
+    transition: all .5s linear;
+    transform: translateX(100%);
+    z-index: -1;
+    &_list {
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0;
+      margin: 0 auto;
+      &_item {
+        margin: 15px 0;
+        text-align: center;
+        &.activ {
+          a {
+            background-color: #fff;
+            font-weight: 500;
+            color: #373737;
+          }
+        }
+        a {
+          color: #ffffff;
+          position: relative;
+          font-weight: 500;
+          &:hover {
+            &:before {
+              opacity: 1;
+              top: 2px;
+            }
+            &:after {
+              opacity: 1;
+              bottom: 0px;
+            }
+          }
+          &:before,
+          &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            transition: all .5s linear;
+            left: 0;
+            opacity: 0;
+          }
+          &:before {
+            top: -8px;
+            border-top: 1px solid #fff;
+          }
+          &:after {
+            bottom: -10px;
+            border-bottom: 1px solid #fff;
+          }
+        }
+      }
+    }
+  }
   &__brand {
     .adaptiv(5,3,3,2,2);
     order: 0;
@@ -107,9 +174,46 @@
       padding-left: 0;
       &_item {
         margin: 0 15px;
+        &.activ {
+          a {
+            background-color: #fff;
+            font-weight: 500;
+            color: #373737;
+          }
+        }
         a {
           color: #ffffff;
           font-weight: 500;
+          position: relative;
+          cursor: pointer;
+          &:hover {
+            &:before {
+              opacity: 1;
+              top: 2px;
+            }
+            &:after {
+              opacity: 1;
+              bottom: 0px;
+            }
+          }
+          &:before,
+          &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            transition: all .5s linear;
+            left: 0;
+            opacity: 0;
+          }
+          &:before {
+            top: -8px;
+            border-top: 1px solid #fff;
+          }
+          &:after {
+            bottom: -10px;
+            border-bottom: 1px solid #fff;
+          }
         }
       }
     }
