@@ -1,0 +1,200 @@
+/** 
+* стили сетки меню
+*/
+.brand-name {
+  .adaptiv(12,12,12,5,5);
+  text-align: center;
+  color: #ffffff;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+.nav {
+  background-color: rgba(0,0,0,.6);
+  box-shadow: 0 0 5px rgba(0,0,0,.6);
+  .row {
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__btn {
+    order: 3;
+    margin: 5px 15px;
+    display: none;
+    background: transparent;
+    outline: none !important;
+    border: 2px solid rgba(255,255,255, .4);
+    border-radius: 5px;
+    padding: 7px;
+    height: 40px;
+    width: 40px;
+    position: relative;		
+    cursor: pointer;
+    &:hover {
+      .nav__btn_icon {
+        &:before,
+        &:after {
+          width: 15px;
+        }
+      }
+    }
+    &_icon {
+      height: 4px;
+      width: 30px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(0deg);
+      background: rgba(255,255,255, 1);
+      opacity: 0.4;
+      border-radius: 10px;
+      position: absolute;
+      transition: all ease .5s;
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        height: inherit;
+        width: inherit;
+        margin: auto;
+        background: inherit;
+        border-radius: inherit;
+        transition: all ease .5s;
+      }
+      &:before {
+        top: -8px;
+        left: 0;
+        transform-origin: left;
+      }
+      &:after {
+        bottom: -8px;
+        right: 0;
+        transform-origin: right;	
+      }
+    }
+  }
+  &__brand {
+    .adaptiv(5,4,3,2,2);
+    order: 0;
+    img {
+      width: 110px;
+      margin: 0;
+      object-fit: cover;
+    }
+  }
+  &__menu {
+    .adaptiv(5,5,5,7,7);
+    order: 1;
+    display: flex;
+    justify-content: center;
+    &_list {
+      display: flex;
+      padding-left: 0;
+      &_item {
+        margin: 0 15px;
+        a {
+          color: #ffffff;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  &__phone {
+    .adaptiv(4,6,4,3,3);
+    order: 2;
+    text-align: right;
+    color: #ffffff;
+    a {
+      color: #ffffff;
+      font-weight: 500;
+    }
+  }
+}
+.mhd-xs(@res) {
+	@media screen and (max-width: @xs) {
+		@res();
+	}
+}
+.mhd-sm(@res) {
+	@media screen and (max-width: @sm) {
+		@res();
+	}
+}
+.mhd-md(@res) {
+	@media screen and (max-width: @md) {
+		@res();
+	}
+}
+.mhd-lg(@res) {
+	@media screen and (max-width: @lg) {
+		@res();
+	}
+}
+.mhd-xl(@res) {
+	@media screen and (max-width: @xl) {
+		@res();
+	}
+}
+.nav {
+  &.hidden-xs {
+    .nav__mobile {
+      .mhd-xs({display: flex !important;});
+    }
+    .nav__btn {
+      .mhd-xs({display: block !important;});
+    }
+    .nav__menu {
+      .mhd-xs({.hd();});
+    }
+  }
+  &.hidden-sm {
+    .nav__mobile {
+      .mhd-sm({display: flex !important;});
+    }
+    .nav__btn {
+      .mhd-sm({display: block !important;});
+    }
+    .nav__menu {
+      .mhd-sm({.hd();});
+    }
+  }
+  &.hidden-md {
+    /* .nav__mobile {
+      .mhd-md({display: flex !important;});
+    } */
+    .nav__btn {
+      .mhd-md({display: block !important;});
+    }
+    .nav__menu {
+      .mhd-md({.hd();});
+    }
+  }
+  &.hidden-lg {
+    .nav__mobile {
+      .mhd-lg({display: flex !important;});
+    }
+    .nav__btn {
+      .mhd-lg({display: block !important;});
+    }
+    .nav__menu {
+      .mhd-lg({.hd();});
+    }
+  }
+  &.hidden-xl {
+    .nav__mobile {
+      .mhd-xl({display: flex !important;});
+    }
+    .nav__btn {
+      .mhd-xl({display: block !important;});
+    }
+    .nav__menu {
+      .mhd-xl({.hd();});
+    }
+  }
+}
+.hd() {
+  display: none !important;
+  .nav__phone {
+    order: 1;
+  }
+  .nav__menu {
+    order: 2;
+  }
+}
