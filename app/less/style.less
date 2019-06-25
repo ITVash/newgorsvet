@@ -489,6 +489,27 @@ img {
     }
   }
 }
+section:first-child {
+  &:before {
+    top: 25px !important;
+  }
+section {
+  position: relative;
+  z-index: 0;  
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    transform: skewY(2deg);
+    top: -25px;
+    left: 0;
+    bottom: -25px;
+    width: 100%;
+    background-color: #fccc04;
+    z-index: 0;
+    box-shadow: 0 0 5px 1px rgba(0,0,0,.4);
+  }
+}
 section,
 footer {
   position: relative;
