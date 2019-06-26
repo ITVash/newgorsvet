@@ -14,7 +14,19 @@ const mobM = document.querySelector('.nav__mobile');
 //const link = document.querySelector('.nav__mobile .nav__mobile_list .nav__mobile_list_item a');
 const sec = document.querySelectorAll('section');
 const foot = document.querySelector('footer');
+const weather = document.querySelector('.weather__box');
+const apiWea = "https://api.openweathermap.org/data/2.5/weather?q=Donetsk,ua&APPID=113c76f2bace79a084c739ec6de01e86&units=metric&lang=ru";
 
+window.addEventListener('load', async () => {
+  const wea = await fetch(apiWea);
+  const res = await wea.json();
+  //const { icon, description } = res.weather;
+  console.log(res);
+  res.weather.map(src => {
+    console.log(src);
+    weather.innerHTML = (`<img src="http://openweathermap.org/img/w/${src.icon}.png" alt="${src.description}">`);
+  }).join("\n");
+});
 
 btn1.addEventListener('click', e => {
   e.preventDefault();

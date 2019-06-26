@@ -7,7 +7,7 @@
 		<title>Донецкгорсвет</title>
 		<link rel="stylesheet" href="./css/normalize.css">
 		<link href="https://fonts.googleapis.com/css?family=Exo+2:400,500,600,700,800,900&display=swap&subset=cyrillic" rel="stylesheet">
-		<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+		<link rel="stylesheet" href="./css/all.css">
 		<link rel="stylesheet" href="./css/style.css">
 		<link rel="apple-touch-icon" sizes="180x180" href="./img/icon/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="./img/icon/favicon-32x32.png">
@@ -80,6 +80,15 @@
 				</div>
 			</div>
 		</header>
+		<section class="weather">
+			<div class="container">
+				<div class="row">
+					<div class="weather__box">
+						<h3>Погода в республике</h3>
+					</div>
+				</div>
+			</div>
+		</section>
     <section id="news" class="news">
 			<div class="container">
 				<div class="row">
@@ -141,7 +150,7 @@
 				<div class="row">
 					<div class="office__hours">
 						<h3>часы работы</h3>
-						<p class="clock">&#9200;</p>
+						<p class="clock"><i class="far fa-alarm-clock"></i></p>
 						<p>ПН–ЧТ: 8:00–17:00 <br>
 								ПТ: 8:00-15:45 <br>
 								СБ: выходной <br>
@@ -170,6 +179,11 @@
 				</div>
 			</div>
 		</footer>
+		<div class="message">
+			<div class="message__icon"><i class="far fa-comment-dots"></i></div>
+			<div class="message__title"></div>
+			<div class="message__body"></div>
+		</div>
 		<script src="https://use.fontawesome.com/dd0c2ffcb0.js"></script>
 		<script src="./js/index.js"></script>
 </body>
