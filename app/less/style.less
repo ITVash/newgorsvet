@@ -517,7 +517,7 @@ img {
   &.open {
     //animation: open 1.5s linear 1;
     width: 300px;
-    height: 300px;
+    min-height: 380px;
     background-color: @yellow;
     border-radius: 5%;
     .message__icon {
@@ -536,7 +536,8 @@ img {
     width: 100%;
     font-size: 20px;
     padding: 15px 15px;
-    input {
+    input,
+    textarea {
       outline: none;
       line-height: 25px;
       display: block;
