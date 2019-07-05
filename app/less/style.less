@@ -185,6 +185,80 @@ img {
     .adaptiv(12,12,12,6,6);
   }
 }
+.service {
+  &__block-list {
+    .adaptiv(10,8,6,4,4);
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    &_item {
+      border: 2px solid rgba(0, 0, 0, .3);
+      border-radius: 15px;
+      padding: 15px 0;
+      box-shadow: 0 5px 10px -3px rgba(0, 0, 0, .3);
+    }
+    a {
+      text-decoration: none;
+      color: #373737;
+      border: 1px solid rgba(55, 55, 55, .6);
+      border-radius: .25rem;
+      padding: 0.5rem 1rem;
+      margin: 0 auto;
+      margin-top: 20px;
+      display: block;
+      text-align: center;
+      width: 150px !important;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      &:before {
+        content: '';
+        position: absolute;
+        background-color: @yellow;
+        border-radius: .25rem;
+        right: -50px;
+        top: 0;
+        height: 100%;
+        width: 0%;
+        transition: all .5s linear;
+        color: #373737;
+        z-index: -1;
+        transform: skewX(45deg);
+      }
+      &:hover {
+        &:before {
+          left: -50px;
+          width: 150%;
+        }
+      }
+    }
+    &_img {
+      text-align: center;
+      height: 150px;
+      .adaptiv(12,12,12,12,12);
+      img {
+        width: 150px;
+        object-fit: cover;
+      }
+    }
+    &_text {
+      text-align: center;      
+      .adaptiv(12,12,12,12,12);
+      position: relative;
+      p {
+        padding:0;
+        margin: 5px 0;
+      }
+      h4 {
+        margin: 10px 0;
+        span {
+          display: block;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
 .news {
   padding: 30px 0;
   background-color: #f4f4f4;
@@ -514,6 +588,14 @@ img {
   justify-content: space-between;
   //align-items: center;
   overflow: hidden;
+  button {
+    background-color: transparent;
+    font-size: 14px;
+    color: #373737;
+    font-weight: 700;
+    border: 2px solid #373737;
+    border-radius: 15px;
+  }
   &.open {
     //animation: open 1.5s linear 1;
     width: 300px;
@@ -580,6 +662,9 @@ img {
   position: relative;
   display: block;
   margin: 20px 0;
+  &:last-of-type {
+    margin-bottom: 5px;
+  }
 }
 @keyframes open {
   0% {
@@ -652,6 +737,10 @@ hr {
   flex-grow: 1;
   background-color: #f4f4f4;
   box-shadow: 0 0 5px rgba(0,0,0,.3);
+  .row {
+    justify-content: center;
+    padding: 50px 0;
+  }
   a.link {
     color: #373737;
     position: relative;
