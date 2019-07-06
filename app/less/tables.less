@@ -1,0 +1,25 @@
+table {
+  width: 100%;
+  thead {
+    //background-color: #9eb6d4;
+    background-color: @yellow;
+  }
+  tbody {
+    tr:nth-child(2n) {
+      //background-color: #dee2f7;
+      background-color: @yellow;
+    }
+    tr {
+      cursor: pointer;
+      color: #373737;
+      &:hover {
+        background-color: rgb(0, 0, 0);
+        color: @yellow;
+      }
+    }
+    td {
+      text-align: center;
+      height: 50px;
+    }
+  }
+}
