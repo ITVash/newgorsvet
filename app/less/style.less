@@ -821,5 +821,27 @@ hr {
     right: 0px; 
   }
 }
+.breadcrumbs {
+  height: 50px;
+  background-color: #f4f4f4;
+  font-size: 14px;
+  padding-bottom: 40px;
+  color: #5e5e5e;
+  ul {
+    display: flex;
+    li {
+      margin: 0 5px;
+      &.active {
+        font-weight: 600;        
+      }
+      a {
+        text-decoration: none;
+        //color: #6478b1;
+        color: darken(@yellow, 5%);
+        font-weight: 600;
+      }
+    }
+  }
+}
 
 @import 'media';
