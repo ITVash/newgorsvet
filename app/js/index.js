@@ -21,6 +21,9 @@ messIco.addEventListener('click', e => {
   e.preventDefault();
   mess.classList.toggle('open');
 });
+document.addEventListener('af_complete', () => {
+  mess.classList.toggle('open');
+});
 //const weather = document.querySelector('.weather__box');
 //const apiWea = "https://api.openweathermap.org/data/2.5/weather?q=Donetsk,ua&APPID=113c76f2bace79a084c739ec6de01e86&units=metric&lang=ru";
 
